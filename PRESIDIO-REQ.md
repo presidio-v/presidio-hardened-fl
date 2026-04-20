@@ -68,3 +68,8 @@ separately because its magnitude is typically small relative to the coefficient
 vector and clipping it independently would require separate sensitivity analysis.
 
 <!-- Deliver the complete working project ready for GitHub publish. -->
+
+## SDLC
+
+These requirements are delivered under the family-wide Presidio SDLC:
+<https://github.com/presidio-v/presidio-hardened-docs/blob/main/sdlc/sdlc-report.md>.
