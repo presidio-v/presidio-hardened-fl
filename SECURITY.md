@@ -8,10 +8,18 @@
 
 ## Reporting a Vulnerability
 
-Do not open a public GitHub issue for security vulnerabilities.
+Please report security vulnerabilities by opening a private GitHub Security Advisory
+(via the "Security" tab → "Report a vulnerability") rather than a public issue.
 
-Email **security@presidio-group.eu** with description, reproduction steps, and impact.
-Acknowledgement within 48 hours; resolution within 7 days.
+Include:
+
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
+
+You will receive an acknowledgement within 5 business days. We aim to release a patch
+within 30 days of a confirmed vulnerability.
 
 ## Security Features
 
@@ -34,3 +42,9 @@ Acknowledgement within 48 hours; resolution within 7 days.
 | Privacy budget over-spend | `PrivacyAccountant` enforces hard stop; exception raised on violation |
 | Malicious node injecting arbitrary weights | FedAvg weighted by sample count; clip_norm bounds per-node influence |
 | Unvalidated CLI inputs | argparse type annotations + manual range checks in each script |
+
+## Software Development Lifecycle
+
+This repository is developed under the Presidio hardened-family SDLC. The public report
+— scope, standards mapping, threat-model gates, and supply-chain controls — is at
+<https://github.com/presidio-v/presidio-hardened-docs/blob/main/sdlc/sdlc-report.md>.
