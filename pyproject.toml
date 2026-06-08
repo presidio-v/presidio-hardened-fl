@@ -34,7 +34,7 @@ dev = [
     "pytest>=7.4",
     "pytest-cov>=7.1.0",
     "ruff>=0.4",
-    "matplotlib>=3.8",
+    "matplotlib>=3.10.8",
 ]
 
 [project.urls]
