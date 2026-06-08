@@ -127,9 +127,9 @@ class FederationRound:
             if use_dp and dp_mechanism is not None and accountant is not None:
                 update = {k: aggregated[k] - old_weights[k] for k in aggregated}
                 # Clip the update vector to clip_norm
-                total_norm = float(
-                    np.sqrt(sum(np.linalg.norm(v) ** 2 for v in update.values()))
-                ) + 1e-8
+                total_norm = (
+                    float(np.sqrt(sum(np.linalg.norm(v) ** 2 for v in update.values()))) + 1e-8
+                )
                 scale = min(1.0, self.clip_norm / total_norm)
                 update = {k: v * scale for k, v in update.items()}
                 # Add calibrated Gaussian noise to the clipped update
