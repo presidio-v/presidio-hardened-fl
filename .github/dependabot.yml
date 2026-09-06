@@ -9,6 +9,13 @@ updates:
     labels:
       - dependencies
       - security
+    groups:
+      # Batch low-risk bumps into one reviewable PR; majors stay separate.
+      pip-minor-patch:
+        applies-to: version-updates
+        update-types:
+          - minor
+          - patch
 
   - package-ecosystem: github-actions
     directory: "/"
@@ -19,3 +26,10 @@ updates:
     labels:
       - dependencies
       - ci
+    groups:
+      # Sub-paths of one action (e.g. codeql-action/{init,autobuild,analyze})
+      # share a pinned SHA on adjacent lines; separate PRs mutually conflict.
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - "*"
