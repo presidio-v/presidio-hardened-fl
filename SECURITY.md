@@ -32,7 +32,7 @@ within 30 days of a confirmed vulnerability.
 | **Gradient norm clipping** | Limits the influence of any single training sample on the aggregated model |
 | **Privacy budget enforcement** | `PrivacyBudgetExhausted` exception halts training when the ε budget is consumed |
 | **Deterministic generation** | All random operations accept a seed for reproducibility |
-| **Dependency audit** | Runs `pip-audit` non-blocking on import when available |
+| **Dependency audit** | Runs `pip-audit` non-blocking on import when available; blocking `pip-audit` in CI on every PR and push to `main` |
 
 ## Threat Model
 
